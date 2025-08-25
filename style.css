@@ -1,0 +1,346 @@
+:root {
+  --yellow: #FFD54F;      /* primary */
+  --yellow-strong: #FFC107; /* accents */
+  --bg: #ffffff;           /* background */
+  --text: #1f2937;         /* gray-800 */
+  --muted: #6b7280;        /* gray-500 */
+  --border: #e5e7eb;       /* gray-200 */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, "Noto Kufi Arabic", "Noto Sans", Ubuntu, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  border-radius: 12px;
+}
+
+.container {
+  width: min(1100px, 92%);
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: saturate(180%) blur(8px);
+  border-bottom: 1px solid var(--border);
+  z-index: 50;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  font-weight: 800;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--yellow), var(--yellow-strong));
+  display: grid;
+  place-items: center;
+  color: #111;
+  font-weight: 900;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.menu a {
+  padding: 0.45rem 0.7rem;
+  border-radius: 999px;
+}
+
+.menu a:hover {
+  background: var(--border);
+}
+
+.lang-switch button {
+  border: 1px solid var(--border);
+  background: #fff;
+  padding: 0.35rem 0.65rem;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.lang-switch button.active {
+  background: var(--yellow);
+  border-color: var(--yellow-strong);
+}
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background: #f9f9f9;
+}
+
+h1 {
+  color: darkblue;
+}
+
+button {
+  padding: 10px 20px;
+  border-radius: 10px;
+  background: #dbca34;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background: #2980b9;
+}
+
+
+/* Hero */
+.hero {
+  background: linear-gradient(180deg, rgba(255,213,79,.35), transparent);
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  align-items: center;
+  padding: 2.2rem 0;
+}
+
+.hero h1 {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  margin-bottom: 0.5rem;
+}
+
+.chip {
+  display: inline-block;
+  background: #111;
+  color: #fff;
+  padding: 0.25rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+.cta {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  background: #fff;
+}
+
+.btn.primary {
+  background: var(--yellow);
+  border-color: var(--yellow-strong);
+}
+
+/* Sections */
+section {
+  padding: 3rem 0;
+  border-top: 1px solid var(--border);
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.card {
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1rem;
+  background: #fff;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.news-item {
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+}
+.card {
+  background-color: #fff9e6; /* لون فاتح */
+  border: 1px solid #ffd700; /* حدود صفراء */
+  border-radius: 10px;
+  padding: 15px;
+  margin: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* ظل خفيف */
+}
+
+.card h3 {
+  color: #ffbf00; /* عنوان باللون الأصفر */
+  margin-bottom: 10px;
+}
+
+.card ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+.mission-vision-container {
+  display: flex;
+  gap: 20px; /* المسافة بين المهمة والرؤية */
+  flex-wrap: wrap; 
+   margin-bottom: 30px;/* باش يظهروا بشكل مرتب على الشاشات الصغيرة */
+}
+
+.mission, .vision {
+  flex: 1; /* كل واحدة تاخذ نفس العرض */
+  background-color: #fff9e6;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+.committees-container {
+  display: flex;
+  gap: 20px; /* المسافة بين كل لجنة */
+  flex-wrap: wrap;
+  margin-bottom: 30px; /* باش على الشاشات الصغيرة يظهروا تحت بعضهم */
+}
+
+.committee {
+  flex: 1; /* كل لجنة تاخذ نفس العرض */
+  background-color: #fff9e6;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* ألوان مميزة لكل لجنة */
+.committee-educative { border-left: 5px solid #ffbf00; }
+.committee-recreational { border-left: 5px solid #00bfff; }
+.committee-communication { border-left: 5px solid #ff69b4; }
+
+.committee h3 {
+  margin-bottom: 10px;
+}
+
+
+
+/* Gallery */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7rem;
+}
+.gallery-container img {
+  width: 300px;   /* تحدد العرض */
+  height: auto;   /* يحافظ على النسبة */
+  margin: 5px;
+  border-radius: 5px; /* اختياري للتجميل */
+}
+
+
+.ph {
+  aspect-ratio: 4/3;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #fff, var(--yellow));
+  border: 1px dashed var(--yellow-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111;
+  font-weight: 600;
+}
+
+/* Forms */
+form {
+  display: grid;
+  gap: 0.8rem;
+}
+
+input, select, textarea {
+  padding: 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  width: 100%;
+  font: inherit;
+}
+
+textarea {
+  min-height: 120px;
+}
+
+.note {
+  font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+  background: #111;
+  color: #fff;
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: #fff;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+  .grid-3, .gallery {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .menu {
+    display: none;
+  }
+  .grid-3, .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
